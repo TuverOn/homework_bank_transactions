@@ -24,7 +24,7 @@ if __name__ == "__main__":
     print(result_1)
     print(result_2)
 
-
+"""Смена формата времени"""
 d1 = datetime.datetime.strptime("2018-07-11T02:26:18.671407", "%Y-%m-%dT%H:%M:%S.%f")
 new_format = d1.strftime("%d-%m-%Y")
 print(new_format)
