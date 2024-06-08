@@ -30,4 +30,6 @@ def get_data(data: str) -> str:
     time = datetime.datetime.strptime(data, "%Y-%m-%dT%H:%M:%S.%f")
     new_format = time.strftime("%d-%m-%Y")
     return new_format
+
+
 print(get_data("2024-08-24T02:26:18.671407"))
