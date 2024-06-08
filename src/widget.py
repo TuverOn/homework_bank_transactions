@@ -1,9 +1,9 @@
 import datetime
 
-from masks import mask_account, mask_card
+from src.masks import mask_account, mask_card
 
 
-def mask_type(coming_str: str) -> str:
+def mask_account_card(coming_str: str) -> str:
     """Функция, которая возвращает исходную строку с замаскированными данными карты или счета"""
 
     new_coming_str = coming_str.split()
@@ -19,12 +19,15 @@ def mask_type(coming_str: str) -> str:
 
 
 if __name__ == "__main__":
-    result_1 = mask_type("Visa Platinum 7000792289606361")
-    result_2 = mask_type("Счет 73654108430135874305")
+    result_1 = mask_account_card("Visa Platinum 7000792289606361")
+    result_2 = mask_account_card("Счет 73654108430135874305")
     print(result_1)
     print(result_2)
 
-"""Смена формата времени"""
-d1 = datetime.datetime.strptime("2018-07-11T02:26:18.671407", "%Y-%m-%dT%H:%M:%S.%f")
-new_format = d1.strftime("%d-%m-%Y")
-print(new_format)
+
+def get_data(data: str) -> str:
+    """Функция, которая меняет формат времени"""
+    time = datetime.datetime.strptime(data, "%Y-%m-%dT%H:%M:%S.%f")
+    new_format = time.strftime("%d-%m-%Y")
+    return new_format
+print(get_data("2024-08-24T02:26:18.671407"))
