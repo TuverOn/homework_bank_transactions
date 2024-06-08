@@ -18,16 +18,16 @@ def mask_account_card(coming_str: str) -> str:
     return mask_number
 
 
-if __name__ == "__main__":
-    result_1 = mask_account_card("Visa Platinum 7000792289606361")
-    result_2 = mask_account_card("Счет 73654108430135874305")
-    print(result_1)
-    print(result_2)
-
-
 def get_data(data: str) -> str:
     """Функция, которая меняет формат времени"""
 
     time = datetime.datetime.strptime(data, "%Y-%m-%dT%H:%M:%S.%f")
     new_format = time.strftime("%d-%m-%Y")
     return new_format
+
+
+if __name__ == "__main__":
+    result_1 = mask_account_card("Visa Platinum 7000792289606361")
+    result_2 = mask_account_card("Счет 73654108430135874305")
+    print(result_1)
+    print(result_2)
