@@ -26,8 +26,8 @@ def get_data(data: str) -> str:
     return new_format
 
 
-# if __name__ == "__main__":
-#     result_1 = mask_account_card("Visa Platinum 7000792289606361")
-#     result_2 = mask_account_card("Счет 73654108430135874305")
-#     print(result_1)
-#     print(result_2)
+if __name__ == "__main__":
+    result_1 = mask_account_card("Visa Platinum 7000792289606361")
+    result_2 = mask_account_card("Счет 73654108430135874305")
+    print(result_1)
+    print(result_2)
