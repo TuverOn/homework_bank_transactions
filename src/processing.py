@@ -1,7 +1,7 @@
 from src.widget import get_data
 
 
-def filter_by_state(list_state_id: list, state: str = "EXECUTED") -> list:
+def filter_by_state(list_state_id: list[dict[str, any]], state: str = "EXECUTED") -> list[dict[str, any]]:
     """Функция, которая принимает на вход список словарей и значение для ключа state
     и возвращает новый список, содержащий только те словари, у которых ключ state
     содержит переданное в функцию значение."""
@@ -20,7 +20,7 @@ list_state_id = [
 ]
 
 
-def sort_by_date(list_id: list, reverse=True) -> list:
+def sort_by_date(list_id: list[dict[str, any]], reverse=True) -> list[dict[str, any]]:
     """Функция, которая принимает на вход список словарей и возвращает новый список, в котором исходные словари
     отсортированы по убыванию даты. Функция принимает два аргумента, второй необязательный задает порядок
     сортировки (убывание, возрастание) и шифрует дату в формате 'dd.mm.yy'."""
