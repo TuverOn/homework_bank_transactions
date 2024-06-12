@@ -8,3 +8,7 @@
 ```
 git clone git@github.com:TuverOn/homework_bank_transactions.git
 ```
+
+### Тестирование
+Для тестирования использованы фикстуры и параметризация.
+Покрыто тестами 100% кода.
