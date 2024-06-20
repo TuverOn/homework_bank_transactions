@@ -1,5 +1,7 @@
 import pytest
 
+from src.generators import card_number_generator
+
 
 @pytest.fixture
 def card_number():
@@ -40,3 +42,30 @@ DICT_2 = [
 @pytest.fixture
 def dict_fixture_2():
     return DICT_2.copy()
+
+
+DICT_3 = [
+    "Перевод организации",
+    "Перевод со счета на счет",
+    "Перевод со счета на счет",
+    "Перевод с карты на карту",
+    "Перевод организации",
+]
+
+
+@pytest.fixture
+def dict_fixture_3():
+    return DICT_3.copy()
+
+
+DICT_4 = [939719570, 142264268, 895315941]
+
+
+@pytest.fixture
+def dict_fixture_4():
+    return DICT_4.copy()
+
+
+@pytest.fixture
+def card_generator_fixture():
+    return card_number_generator(1, 8)

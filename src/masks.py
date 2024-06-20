@@ -6,4 +6,5 @@ def mask_card(card_number: str) -> str:
 
 def mask_account(acc_number: str) -> str:
     """Возвращает замаскированный номер счета в виде строки"""
+
     return f"{"*" * 2}{acc_number[-4:]}"
