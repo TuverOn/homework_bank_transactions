@@ -1,5 +1,4 @@
-from src.generators import (filter_by_currency, transaction_descriptions,
-                            transactions, card_number_generator)
+from src.generators import filter_by_currency, transaction_descriptions, transactions
 
 
 def test_transaction_descriptions(dict_fixture_3):
@@ -24,7 +23,7 @@ def test_card_number_generator(card_generator_fixture):
         "0000 0000 0000 0005",
         "0000 0000 0000 0006",
         "0000 0000 0000 0007",
-        "0000 0000 0000 0008"
+        "0000 0000 0000 0008",
     ]
 
     for expected, actual in zip(expected_output, card_generator_fixture):
