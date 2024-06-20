@@ -68,12 +68,12 @@ def filter_by_currency(transactions, currency):
     """
 
     for i in transactions:
-        if i["operationAmount"]["currency"]["code"] == currency:
+        if i.get("operationAmount").get("currency").get("code") == currency:
             yield i
 
 
 usd_transactions = filter_by_currency(transactions, "USD")
-for i in range(3):
+for i in range(2):
     print(next(usd_transactions)["id"])
 
 
