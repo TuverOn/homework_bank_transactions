@@ -25,15 +25,10 @@ def return_transaction_amount(transactions, transaction_id):
 
     for transaction in transactions:
         if transaction["id"] == transaction_id:
-            if transaction["operationAmount"]["currency"]["code"] == "RUB":
-                return transaction["operationAmount"]["amount"]
-            else:
-                not_rub_amount = transaction["operationAmount"]["amount"]
-                currency = transaction["operationAmount"]["currency"]["code"]
-                rub_amount = convert_to_rub(not_rub_amount, currency)
-                return round(rub_amount, 2)
+            rub_amount = convert_to_rub(transaction)
+            return round(rub_amount, 2)
 
 
 if __name__ == "__main__":
     transactions = get_transactions_dictionary("../data/operations.json")
-    print(return_transaction_amount(transactions, 441945886))
+    print(return_transaction_amount(transactions, 464419177))

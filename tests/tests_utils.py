@@ -25,4 +25,4 @@ def test_get_transactions_dictionary(get_bad_file):
 
 
 def test_return_transaction_amount(transactions, rub_transaction_number):
-    assert return_transaction_amount(transactions, rub_transaction_number) == "31957.58"
+    assert return_transaction_amount(transactions, rub_transaction_number) == 31957.58
