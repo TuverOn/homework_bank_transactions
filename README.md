@@ -17,5 +17,8 @@ git clone git@github.com:TuverOn/homework_bank_transactions.git
 Был добавлен модуль decorators.py с прописанным декоратором log
 Был добавлен модуль test_decorators.py для для тестирования декоратора
 
-### Тестирование
+### Задача 12.2 Библиотека logging
+Были прологгированы модули masks.py и utils.py
+
+#### Тестирование
 Для тестирования использованы фикстуры и параметризация.
