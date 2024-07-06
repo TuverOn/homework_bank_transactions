@@ -26,5 +26,6 @@ git clone git@github.com:TuverOn/homework_bank_transactions.git
 Чтобы получить логи по отработанной программе, необходимо запустить функции в модулях masks.py и utils.py.
 Посмотреть логи можно в файлах masks.log и utils.log.
 
-#### Тестирование
-Для тестирования использованы фикстуры и параметризация.
+### Задача 13.1 Библиотеки csv и pandas
+Были добавлены файлы transactions.csv и transactions_exel.xlsx с данными по транзакциям.
+Был добавлен модуль new_func_transaction.py с функциями, который считывают данные из transactions.csv и transactions_exel.xlsx и преобразуют данные в список словарей.
